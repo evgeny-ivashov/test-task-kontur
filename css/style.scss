@@ -1,3 +1,9 @@
+:root {
+  --main-color: #22253B;
+  --orange: #F15525;
+  --blue:  #38BFF2;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +19,7 @@ body {
   align-items: center;
   font-family: "Glory", sans-serif;
   font-optical-sizing: auto;
-  color: #22253B;
+  color: var(--main-color);
 }
 
 ul {
@@ -26,7 +32,7 @@ a {
   color: inherit;
 
   &:hover {
-    color: #F15525;
+    color: var(--orange);
   }
 }
 
@@ -124,7 +130,7 @@ header {
 
   .phone {
     line-height: 23px;
-    color: #38BFF2;
+    color: var(--blue);
 
     @media all and (max-width: 768px) {
       font-size: 14px;
@@ -144,7 +150,7 @@ header {
 
     span, span:before, span:after {
       display: block;
-      background: #F15525;
+      background: var(--orange);
       width: 100%;
       height: 2px;
       border-radius: 21px;
@@ -217,12 +223,12 @@ section {
     }
 
     svg {
-      fill: #22253B;
+      fill: var(--main-color);
       transition: fill 0.5s;
     }
 
     &:hover {
-      background: #F15525;
+      background: var(--orange);
 
       svg {
         fill: #FFFFFF;
@@ -257,7 +263,7 @@ section {
 
 button {
   border-radius: 82px;
-  background: #F15525;
+  background: var(--orange);
   padding: 27px 38px 27px 45px;
   color: #FFFFFF;
   font-size: 20px;
@@ -269,7 +275,7 @@ button {
   transition: background 0.5s;
 
   &:hover {
-    background: #38BFF2;
+    background: var(--blue);
   }
 }
 
@@ -292,8 +298,8 @@ button {
     font-weight: 500;
     font-size: 46px;
     line-height: 46px;
-    color: #22253B;
     margin-bottom: 24px;
+    color: var(--main-color);
 
     @media all and (max-width: 1366px) {
       font-size: 30px;
@@ -315,7 +321,7 @@ button {
     }
 
     span {
-      color: #F15525;
+      color: var(--orange);
     }
 
     &:after {
@@ -336,8 +342,8 @@ button {
 
   p {
     line-height: 23px;
-    color: #22253B;
     margin-bottom: 16px;
+    color: var(--main-color);
 
     @media all and (max-width: 768px) {;
       font-size: 12px;
@@ -391,7 +397,6 @@ button {
     p {
       line-height: 18.5px;
       text-align: center;
-      color: #22253B;
       margin-bottom: 10px;
 
       &:nth-last-of-type(1) {
@@ -618,11 +623,11 @@ footer {
       gap: 16px;
 
       svg {
-        fill: #22253B;
+        fill: var(--main-color);
         transition: fill 0.5s;
 
         &:hover {
-          fill: #F15525;
+          fill: var(--orange);
         }
       }
 
@@ -655,7 +660,7 @@ footer {
       li {
         &:nth-of-type(1) {
           a {
-            color: #38BFF2;
+            color: var(--blue);
           }
         }
       }
@@ -704,7 +709,7 @@ footer {
         a {
           font-size: 12px;
           line-height: 23px;
-          color: #F15525;
+          color: var(--orange);
         }
       }
     }
@@ -792,7 +797,7 @@ footer {
     max-width: 345px;
 
     a {
-      color: #F15525;
+      color: var(--orange);
     }
   }
 }

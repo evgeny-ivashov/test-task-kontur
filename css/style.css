@@ -1,3 +1,9 @@
+:root {
+  --main-color: #22253B;
+  --orange: #F15525;
+  --blue: #38BFF2;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +19,7 @@ body {
   align-items: center;
   font-family: "Glory", sans-serif;
   font-optical-sizing: auto;
-  color: #22253B;
+  color: var(--main-color);
 }
 
 ul {
@@ -26,7 +32,7 @@ a {
   color: inherit;
 }
 a:hover {
-  color: #F15525;
+  color: var(--orange);
 }
 
 header, main, footer {
@@ -108,7 +114,7 @@ header nav .closeMenu {
 }
 header .phone {
   line-height: 23px;
-  color: #38BFF2;
+  color: var(--blue);
 }
 @media all and (max-width: 768px) {
   header .phone {
@@ -129,7 +135,7 @@ header .burger {
 }
 header .burger span, header .burger span:before, header .burger span:after {
   display: block;
-  background: #F15525;
+  background: var(--orange);
   width: 100%;
   height: 2px;
   border-radius: 21px;
@@ -198,11 +204,11 @@ section {
   transform: translateY(-50%) rotate(180deg);
 }
 .swiper .navBtn svg {
-  fill: #22253B;
+  fill: var(--main-color);
   transition: fill 0.5s;
 }
 .swiper .navBtn:hover {
-  background: #F15525;
+  background: var(--orange);
 }
 .swiper .navBtn:hover svg {
   fill: #FFFFFF;
@@ -234,7 +240,7 @@ section {
 
 button {
   border-radius: 82px;
-  background: #F15525;
+  background: var(--orange);
   padding: 27px 38px 27px 45px;
   color: #FFFFFF;
   font-size: 20px;
@@ -246,7 +252,7 @@ button {
   transition: background 0.5s;
 }
 button:hover {
-  background: #38BFF2;
+  background: var(--blue);
 }
 
 @media all and (max-width: 990px) {
@@ -263,8 +269,8 @@ button:hover {
   font-weight: 500;
   font-size: 46px;
   line-height: 46px;
-  color: #22253B;
   margin-bottom: 24px;
+  color: var(--main-color);
 }
 @media all and (max-width: 1366px) {
   .preview h2 {
@@ -286,7 +292,7 @@ button:hover {
   }
 }
 .preview h2 span {
-  color: #F15525;
+  color: var(--orange);
 }
 .preview h2:after {
   content: "";
@@ -305,8 +311,8 @@ button:hover {
 }
 .preview p {
   line-height: 23px;
-  color: #22253B;
   margin-bottom: 16px;
+  color: var(--main-color);
 }
 @media all and (max-width: 768px) {
   .preview p {
@@ -358,7 +364,6 @@ button:hover {
 .infoBlock .infoBlockItem p {
   line-height: 18.5px;
   text-align: center;
-  color: #22253B;
   margin-bottom: 10px;
 }
 .infoBlock .infoBlockItem p:nth-last-of-type(1) {
@@ -559,11 +564,11 @@ footer .leftSide .social {
   gap: 16px;
 }
 footer .leftSide .social svg {
-  fill: #22253B;
+  fill: var(--main-color);
   transition: fill 0.5s;
 }
 footer .leftSide .social svg:hover {
-  fill: #F15525;
+  fill: var(--orange);
 }
 @media all and (max-width: 768px) {
   footer .leftSide .social {
@@ -589,7 +594,7 @@ footer .rightSide .contactsList {
   gap: 3px;
 }
 footer .rightSide .contactsList li:nth-of-type(1) a {
-  color: #38BFF2;
+  color: var(--blue);
 }
 @media all and (max-width: 768px) {
   footer .rightSide {
@@ -634,7 +639,7 @@ footer .footerUserInfo .legalLinks a {
   footer .footerUserInfo .legalLinks a {
     font-size: 12px;
     line-height: 23px;
-    color: #F15525;
+    color: var(--orange);
   }
 }
 @media all and (max-width: 768px) {
@@ -711,7 +716,7 @@ footer .footerUserInfo .legalLinks a {
   max-width: 345px;
 }
 .overlay p a {
-  color: #F15525;
+  color: var(--orange);
 }
 
 /*# sourceMappingURL=style.css.map */
