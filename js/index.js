@@ -1,3 +1,13 @@
+import {setupModal} from './modules/modal.js';
+import {setupMobileMenu} from './modules/mobileMenu.js';
+import {setupForm} from './modules/formHandler.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    setupModal();
+    setupMobileMenu();
+    setupForm();
+});
+
 const swiper = new Swiper('.swiper', {
     loop: true,
     pagination: {
@@ -9,8 +19,19 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.button-prev',
     },
     autoplay: {
-        delay: 6000,
+        delay: 10000,
         disableOnInteraction: false,
+    },
+});
+
+
+Fancybox.bind("[data-fancybox='gallery']", {
+    Thumbs: false,
+    Toolbar: {
+        display: [
+            "zoom",
+            "close"
+        ],
     },
 });
 
@@ -34,44 +55,3 @@ function init() {
 
     map.geoObjects.add(placemark);
 }
-
-const orderForm = document.querySelector('.orderForm');
-const openFormButtons = document.querySelectorAll('.openForm');
-const modalOverlay = document.querySelector('.overlay');
-const mobileNavigation = document.querySelector('nav');
-const burger = document.querySelector('.burger');
-const closeMenuButton = document.querySelector('.closeMenu');
-
-const openMobileNavigation = () => {
-    mobileNavigation.classList.add('active');
-}
-
-const closeMobileNavigation = () => {
-    mobileNavigation.classList.remove('active');
-}
-
-burger.addEventListener('click', openMobileNavigation);
-closeMenuButton.addEventListener('click', closeMobileNavigation);
-
-const openModal = () => {
-    modalOverlay.classList.add('active');
-}
-
-const closeModal = () => {
-    modalOverlay.classList.remove('active');
-}
-
-openFormButtons.forEach(button => {
-    button.addEventListener('click', openModal)
-})
-
-modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) {
-        closeModal();
-    }
-});
-
-orderForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log("submit");
-});

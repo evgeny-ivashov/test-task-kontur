@@ -6,15 +6,18 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Школа программирования для тех, кому нужны реальные навыки, а не просто сертификат</title>
+    <link rel="icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/map.js"
+    <link rel="stylesheet" href="./css/fancybox.css" />
+    <script src="js/libs/swiper-bundle.min.js"></script>
+    <script src="js/libs/map.js"
             type="text/javascript"></script>
+    <script src="./js/libs/fancybox.umd.js"></script>
 </head>
 <body>
 <header>
@@ -43,7 +46,7 @@
                 <div class="swiper-slide">
                     <div class="innerSlideWrapper">
                         <div class="leftSide">
-                            <h2>Школа&#160;<span>{</span><b>программирования</b><span>}</span> для тех, кому нужны
+                            <h2>Школа <span>{</span><b>программирования</b><span>}</span> для тех, кому нужны
                                 реальные навыки,
                                 а не просто сертификат</h2>
                             <p>Закажите звонок, и наш специалист свяжется с вами в ближайшее время</p>
@@ -129,8 +132,10 @@
             </div>
             <div class="infoBlockItem">
                 <img src="img/infoBlockIcon7.png" alt="">
-                <p>Огромное количество практики</p>
-                <p>Более 500 самостоятельных заданий и 20 полноценных больших проектов</p>
+                <div class="lastItem">
+                    <p>Огромное количество практики</p>
+                    <p>Более 500 самостоятельных заданий и 20 полноценных больших проектов</p>
+                </div>
             </div>
         </div>
     </section>
@@ -165,10 +170,26 @@
         <div class="galleryItem big">
             <img src="img/photo1.jpg" alt="">
         </div>
-        <div class="galleryItem"><img src="img/photo2.jpg" alt=""></div>
-        <div class="galleryItem"><img src="img/photo3.jpg" alt=""></div>
-        <div class="galleryItem"><img src="img/photo4.jpg" alt=""></div>
-        <div class="galleryItem"><img src="img/photo5.jpg" alt=""></div>
+        <div class="galleryItem">
+            <a href="img/photo1.jpg" data-fancybox="gallery">
+                <img src="img/photo1.jpg" alt="Фото 1">
+            </a>
+        </div>
+        <div class="galleryItem">
+            <a href="img/photo2.jpg" data-fancybox="gallery">
+                <img src="img/photo2.jpg" alt="Фото 2">
+            </a>
+        </div>
+        <div class="galleryItem">
+            <a href="img/photo3.jpg" data-fancybox="gallery">
+                <img src="img/photo3.jpg" alt="Фото 3">
+            </a>
+        </div>
+        <div class="galleryItem">
+            <a href="img/photo4.jpg" data-fancybox="gallery">
+                <img src="img/photo5.jpg" alt="Фото 5">
+            </a>
+        </div>
     </section>
     <section id="map"></section>
 </main>
@@ -287,6 +308,6 @@
         </form>
     </div>
 </div>
-<script src="./js/index.js"></script>
+<script type="module" src="./js/index.js"></script>
 </body>
 </html>
