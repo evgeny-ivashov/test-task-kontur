@@ -9,7 +9,7 @@ export const setupForm = (closeModal) => {
         const formData = new FormData(orderForm);
         const data = Object.fromEntries(formData.entries());
 
-        console.log("📦 Собранные данные:", data);
+        console.log("данные:", data);
 
         try {
             const response = await fetch('/api/send-form', {
