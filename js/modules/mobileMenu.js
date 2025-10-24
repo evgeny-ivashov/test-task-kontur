@@ -5,8 +5,15 @@ export const setupMobileMenu = () => {
 
     if (!mobileNavigation || !burger || !closeMenuButton) return;
 
-    const openMenu = () => mobileNavigation.classList.add('active');
-    const closeMenu = () => mobileNavigation.classList.remove('active');
+    const openMenu = () => {
+        document.body.style.overflow = 'hidden';
+        mobileNavigation.classList.add('active');
+    };
+
+    const closeMenu = () => {
+        document.body.removeAttribute('style');
+        mobileNavigation.classList.remove('active')
+    };
 
     burger.addEventListener('click', openMenu);
     closeMenuButton.addEventListener('click', closeMenu);

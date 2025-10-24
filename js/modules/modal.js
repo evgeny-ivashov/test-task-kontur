@@ -4,8 +4,15 @@ export const setupModal = () => {
 
     if (!modalOverlay) return;
 
-    const openModal = () => modalOverlay.classList.add('active');
-    const closeModal = () => modalOverlay.classList.remove('active');
+    const openModal = () => {
+        document.body.style.overflow = 'hidden';
+        modalOverlay.classList.add('active')
+    };
+
+    const closeModal = () => {
+        document.body.removeAttribute('style');
+        modalOverlay.classList.remove('active')
+    };
 
     openFormButtons.forEach(button => {
         button.addEventListener('click', openModal);
