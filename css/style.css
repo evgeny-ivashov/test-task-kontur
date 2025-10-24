@@ -31,8 +31,10 @@ a {
   transition: color 0.5s;
   color: inherit;
 }
-a:hover {
-  color: var(--orange);
+@media (hover: hover) {
+  a:hover {
+    color: var(--orange);
+  }
 }
 
 header, main, footer {
@@ -207,11 +209,13 @@ section {
   fill: var(--main-color);
   transition: fill 0.5s;
 }
-.swiper .navBtn:hover {
-  background: var(--orange);
-}
-.swiper .navBtn:hover svg {
-  fill: #FFFFFF;
+@media (hover: hover) {
+  .swiper .navBtn:hover {
+    background: var(--orange);
+  }
+  .swiper .navBtn:hover svg {
+    fill: #FFFFFF;
+  }
 }
 
 .swiper-slide .innerSlideWrapper {
@@ -251,8 +255,10 @@ button {
   font-family: inherit;
   transition: background 0.5s;
 }
-button:hover {
-  background: var(--blue);
+@media (hover: hover) {
+  button:hover {
+    background: var(--blue);
+  }
 }
 
 @media all and (max-width: 990px) {
@@ -483,8 +489,10 @@ button:hover {
   object-fit: cover;
   transition: transform 0.3s;
 }
-.gallery a:hover img {
-  transform: scale(1.05);
+@media (hover: hover) {
+  .gallery a:hover img {
+    transform: scale(1.05);
+  }
 }
 .gallery .galleryItem.big {
   grid-row: span 2;
@@ -567,8 +575,10 @@ footer .leftSide .social svg {
   fill: var(--main-color);
   transition: fill 0.5s;
 }
-footer .leftSide .social svg:hover {
-  fill: var(--orange);
+@media (hover: hover) {
+  footer .leftSide .social svg:hover {
+    fill: var(--orange);
+  }
 }
 @media all and (max-width: 768px) {
   footer .leftSide .social {
