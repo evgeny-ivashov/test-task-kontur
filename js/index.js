@@ -3,9 +3,10 @@ import {setupMobileMenu} from './modules/mobileMenu.js';
 import {setupForm} from './modules/formHandler.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    setupModal();
+    const { closeModal } = setupModal();
+
     setupMobileMenu();
-    setupForm();
+    setupForm(closeModal);
 });
 
 const swiper = new Swiper('.swiper', {

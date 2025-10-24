@@ -14,4 +14,6 @@ export const setupModal = () => {
     modalOverlay.addEventListener('click', (e) => {
         if (e.target === modalOverlay) closeModal();
     });
+
+    return { closeModal };
 };
